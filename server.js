@@ -16,7 +16,8 @@ const server = http.createServer(function(req, res){
 });
 
 const PORT = process.env.PORT || 8000
+const HOST = process.env.HOST || 'localhost'
 
-server.listen(PORT, 'localhost');
+server.listen(PORT, HOST);
 
-if (server.listen) console.log("Server is listening on 8000");
+if (server.listen) console.log(`Server is listening on ${PORT}`);
