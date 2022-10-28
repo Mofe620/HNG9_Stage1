@@ -10,7 +10,7 @@ const myBio = {
 
 const server = http.createServer(function(req, res){
     if (req.url === '/stage1' && req.method === 'GET') {
-        res.writeHead(200,{'Content-Type': 'application/json'});
+        res.writeHead(200,{'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'});
         res.end(JSON.stringify(myBio));
     }
 });
